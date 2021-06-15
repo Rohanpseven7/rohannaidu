@@ -114,6 +114,24 @@ div {
     <a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">PROCEED TO PAY</a>
   </form>
 </div>
+  <script>
+    function display()
+    {
+      var getamount=document.getElementById("amount").value;
+     
+      var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - getamount;
+      if(getamount>17000)
+      {
+      alert("Insufficient Balance.");
+      }
+      else{
+      document.getElementById("result").innerHTML="You have done transaction of amount "+getamount+"to  "+document.getElementById("names").value+" <br> Your Account Balance is   "+myAccountBalance;
+       document.getElementById("myAccountBalance").innerText = myAccountBalance;
+      }
+      return false;
+    }
+  </script>
+<a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">Exit</a>
 <div class="footer">
   <p style="color:white">@Copyright RPSN BANK - YOUR BANK YOUR WAY OF LIFE </p>
 </div>
