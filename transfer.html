@@ -30,9 +30,7 @@ h1 {
   padding-top: 40px;
   margin-left: 30px;
 }
-h2,h4{
-  color:blue;
-}
+
 body {
   background-image: url("https://rohanpseven7.github.io/rohannaidu/bank.jpg");
   background-size: 1600px 720px;
@@ -68,10 +66,7 @@ div {
   background-color: #7852ff;
   padding: 20px;
 }
-#my-info text-center{
-  border-radius: 5px;
-  padding: 20px;
-}
+
 #result{
    color: white;
    font-size: 20px;
@@ -99,14 +94,12 @@ div {
         </button>
     </nav>
     <!-- navbar ends here  -->
-<div class="my-info text-center">
-	<h1>PAYMENT</h1>
-        <h2>Name: Rohan Naidu</h2>
-        <h4>Current Balance: <span id="myAccountBalance">8600</span></h4>
-    </div>
+    <h1>PAYMENT</h1>
 <p>Select the user you want to transfer and the amount.</p>
 <div>
-  <form  onsubmit="return display()">
+  <form  onsubmit="return display()">	
+     <label>Name: Rohan Naidu</label>
+     <label>Current Balance: <span id="myAccountBalance">8600</span></label>	  
     <label for="names">USER : </label>
     <select id="names" name="names">
       <option value="srirag">Srirag</option>
