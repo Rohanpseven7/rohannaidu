@@ -115,28 +115,10 @@ result{
     </select>
     <label for="amount">AMOUNT : </label>
     <input type="text" id="amount" name="amount" placeholder="Enter your amount...">
-    <a><input type="submit" id="submit" name="submit" value="Pay Now"></a>
-    <div id="result"></div>
-  </form>
-</div>
-  <script>
-    function display()
-    {
-      var getamount=document.getElementById("amount").value;
-     
-      var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - getamount;
-      if(getamount>17000)
-      {
-      alert("Insufficient Balance.");
-      }
-      else{
-      document.getElementById("result").innerHTML="You have done transaction of amount "+getamount+"to  "+document.getElementById("names").value+" <br> Your Account Balance is   "+myAccountBalance;
-       document.getElementById("myAccountBalance").innerText = myAccountBalance;
-      }
-      return false;
-    }
-  </script>
-<a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">Exit</a>
+    <a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">Pay Now</a>
+    </form>
+    </div>
+	
 <div class="footer">
   <p style="color:white">@Copyright RPSN BANK - YOUR BANK YOUR WAY OF LIFE </p>
 </div>
