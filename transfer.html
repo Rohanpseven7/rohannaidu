@@ -13,14 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 <style>
 input[type=text], select {
-  width: 100%;
+  width: 25%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  color:blue;
 }
 
 h1 {
@@ -36,11 +35,17 @@ body {
   background-size: 1600px 720px;
 }
 
+h2,h4 {
+  color: #fa484b;
+  font-size: 20px;
+}
+	
 label{
   color:white;
 }
-
-.button {
+   
+  }
+  .button {
   display: inline-block;
   border-radius: 4px;
   background-color: skyblue;
@@ -55,8 +60,9 @@ label{
   cursor: pointer;
   margin: 8px 0;
 }
+  
 p{
-  color: blue;
+ color: blue;
   font-family: Georgia;
   font-size: 18px;
   margin-left: 20px;
@@ -66,32 +72,10 @@ div {
   background-color: #7852ff;
   padding: 20px;
 }
- #submit{
-   color: #FFFFFF;
-   background-color: skyblue;
-   padding: 5px;
-   width:10%;
-   font-weight: bold;
-   border-radius: 1px;
-  }
-  #result{
-   color: white;
-   font-size: 20px;
-   
-  }
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: skyblue;
-  color: white;
-  text-align: center;
-}
 </style>
 </head>
 <body>
-     <!-- navbar starts here  -->
+<!-- navbar starts here  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 	<a class="navbar-brand">
       <img class="img-responsive" width="60px" height="" src="RPSN.jpg"></a>
@@ -103,10 +87,11 @@ div {
     </nav>
     <!-- navbar ends here  -->
 <h1>PAYMENT</h1>
-<hr>
+   <h2>Name: Rohan</h2>
+   <h4>Current Balance: <span id="myAccountBalance">8600</span></h4>
 <p>Select the user you want to transfer and the amount.</p>
 <div>
-  <form  onsubmit="return display()">
+  <form onsubmit="return display()">
     <label for="names">USER : </label>
     <select id="names" name="names">
       <option value="srirag">Srirag</option>
@@ -121,18 +106,21 @@ div {
       <option value="zomato">Zomato</option>
       <option value="apollo">Apollo</option>
     </select>
+    
     <label for="amount">AMOUNT : </label>
     <input type="text" id="amount" name="amount" placeholder="Enter your amount...">
     <p><input type="submit" id="submit" name="submit" value="Pay Now" /></p>
     <div id="result"></div>
-    </form>
-    </div>
-    <script>
-    function display(){
+  </form>
+</div>
+  <script>
+    function display()
+    {
       var getamount=document.getElementById("amount").value;
      
       var myAccountBalance = parseInt(document.getElementById("myAccountBalance").innerText) - getamount;
-      if(getamount>8600){
+      if(getamount>95000)
+      {
       alert("Insufficient Balance.");
       }
       else{
@@ -142,10 +130,6 @@ div {
       return false;
     }
   </script>
-  <a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">Exit</a>
-	
-<div class="footer">
-  <p style="color:white">@Copyright RPSN BANK - YOUR BANK YOUR WAY OF LIFE </p>
-</div>
-</body>
+<a href="https://rohanpseven7.github.io/rohannaidu/final.html" class="button">Exit</a>
+    </body>
 </html>
